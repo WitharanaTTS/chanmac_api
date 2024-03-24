@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv"
 import mongoose from "mongoose"
+import testRoute from "./routes/test.js";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import itemRoute from "./routes/items.js";
@@ -29,6 +30,7 @@ app.use(cors())
 app.use(cookieParser())
 app.use(express.json());
 
+app.use("/api/test", testRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/items", itemRoute);
