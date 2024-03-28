@@ -1,13 +1,17 @@
 import mongoose from "mongoose";
-const ItemSchema = new mongoose.Schema({
+const ItemSchema = new mongoose.Schema(
+  {
   title: {
-    type: String
+    type: String,
+    required: true,
   },
   type: {
-    type: String
+    type: String,
+    required: true,
   },
   desc: {
-    type: String
+    type: String,
+    required: true,
   },
   photos: {
     type: [String],
@@ -19,15 +23,19 @@ const ItemSchema = new mongoose.Schema({
   },
   categories: {
     type: [String],
+    required: true,
   },
   sizes: {
     type: [String],
+    required: true,
   },
   price: {
-    type: Number
+    type: Number,
+    required: true,
   },
   qty: {
-    type: Number
+    type: Number,
+    required: true,
   },
   availability: {
     type: Boolean,
@@ -36,6 +44,8 @@ const ItemSchema = new mongoose.Schema({
   keywords: {
     type: [String],
   },
-});
+},
+{ timestamps: true }
+);
 
 export default mongoose.model("Item", ItemSchema)
