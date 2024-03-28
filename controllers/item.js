@@ -44,7 +44,7 @@ export const getItems = async (req, res, next) => {
   try {
     const items = await Item.find({
       ...others,
-      cheapestPrice: { $gt: min | 1, $lt: max || 999 },
+      price: { $gt: min | 1, $lt: max || 9999 },
     }).limit(req.query.limit);
     res.status(200).json(items);
   } catch (err) {
