@@ -1,16 +1,13 @@
 import mongoose from "mongoose";
 const ItemSchema = new mongoose.Schema({
   title: {
-    type: String,
-    required: true,
+    type: String
   },
   type: {
-    type: String,
-    required: true,
+    type: String
   },
   desc: {
-    type: String,
-    required: true,
+    type: String
   },
   photos: {
     type: [String],
@@ -27,12 +24,10 @@ const ItemSchema = new mongoose.Schema({
     type: [String],
   },
   price: {
-    type: Number,
-    required: true,
+    type: Number
   },
   qty: {
-    type: Number,
-    required: true,
+    type: Number
   },
   availability: {
     type: Boolean,
