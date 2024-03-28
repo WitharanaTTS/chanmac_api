@@ -15,10 +15,6 @@ const ItemSchema = new mongoose.Schema({
   photos: {
     type: [String],
   },
-  desc: {
-    type: String,
-    required: true,
-  },
   rating: {
     type: Number,
     min: 0,
@@ -41,10 +37,6 @@ const ItemSchema = new mongoose.Schema({
   availability: {
     type: Boolean,
     default: true,
-  },
-  featured: {
-    type: Boolean,
-    default: false,
   },
   keywords: {
     type: [String],
